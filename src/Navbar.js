@@ -9,7 +9,7 @@ import Calpol from './Calpol500.jpg'
 
 export const Navbar = () => {
 
-    const [click, setClick] = useState(false);
+    const [click, setClick] = useState(true);
 
     const handleClick = () => {
         setClick(!click)
