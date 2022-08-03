@@ -1,0 +1,46 @@
+.Filter_box_holder {
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    width: 15rem;
+    margin: 10px;
+    box-shadow: inset 0.1px 0.2px 0.2px 0.5px rgba(0,0,0,0.08),
+    0.1px 0.2px 0.2px 0.5px rgba(0,0,0,0.08);
+    
+    .Filter_heading {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        background-color: rgba(216,217,216,255);
+        height: 3rem;
+        font-size: 18px;
+    }
+
+    .Filter_value {
+        display: flex;
+        flex-direction: column;
+
+        .filter_name {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+            margin: 7px 10px;
+
+            &.selected {
+                color: white;
+                background-color: rgba(50,185,172,255);
+            }
+
+            &:hover {
+                background-color: rgba(50,185,172,255);
+                color: #fff;
+            }
+        }
+    }
+}

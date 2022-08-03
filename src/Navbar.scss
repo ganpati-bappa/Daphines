@@ -1,0 +1,119 @@
+.Header {
+    display : flex;
+    height: 60px;
+    font-family: sans-serif;
+    align-items: center;
+    background-color: rgba(116,10,11,255);
+    color: white;
+    width: 100%;
+
+    .Header_logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        div {
+            background-color: #DDD;
+            margin: 30px;
+            height: 30px;
+            width: 30px;
+            border-radius: 2px;
+        }
+
+        span {
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+
+    .Navbar_links {
+        display: flex;
+        justify-content: space-between;
+
+        .Navbar_link {
+            display: flex;
+            
+            .Link {
+                cursor: pointer;
+                list-style-type: none;
+                margin: 1.2rem;
+            }
+        }
+    }
+
+    .Navbar_menu_icons {
+        display: none;
+        cursor: pointer;
+        padding: 12px;
+    }
+
+    .Navbar_menu_right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 20px;
+
+        .Navbar_user {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            :nth-child(2) {
+                margin: 10px;
+                margin-left: 20px;
+                font-size: 25px;
+            }
+            
+        }
+    }
+
+    @media screen and (max-width: 1100px) {
+        .Navbar_menu_icons {
+            display: inline;
+        }
+
+
+        .Navbar_link {
+            overflow: scroll;
+            width: 120%;
+            flex-direction: column;
+            height: 100vh;
+            position: absolute;
+            line-height: 4rem;
+            right: -140%;
+            top: 40px;
+            opacity: 1;
+            transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+            
+            background-color: rgba(116,10,11,255);;
+            
+            &.active {
+                right: -10%;
+                transition: all 0.6s ease;
+                z-index: 20;
+                align-items: center;
+                box-sizing: border-box;
+            }
+        }
+
+        .Navbar_menu_right {
+            position: absolute;
+            right: 0px;
+
+    
+            .Navbar_user {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                :nth-child(2) {
+                    margin: 10px;
+                    margin-left: 20px;
+                    font-size: 25px;
+                }
+                
+            }
+        }
+    }
+}
